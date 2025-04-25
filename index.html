@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <title>AVANTI - Loja Virtual</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="sticky-top bg-white">
+      <!-- Barra de promoção topo -->
+      <div class="promo-bar">
+        <div class="container-fluid">
+          <div class="text-center text-white">
+            Ganhe <span class="span-valor">R$10,00</span> de desconto no seu
+            primeiro pedido. Utilize o cupom
+            <span class="span-descont">DESCONTO10</span>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto" style="max-width: 1200px">
+        <div class="row align-items-center py-2">
+          <!-- Logo -->
+          <div class="col-md-2 col-6">
+            <a href="#" class="logo">
+              <img src="img/logo.png" alt="AVANTI" class="img-fluid" />
+            </a>
+          </div>
+
+          <!-- Barra de busca -->
+          <div class="col-md-7 col-12 order-md-1 order-3 mt-md-0 mt-2">
+            <div class="search-bar">
+              <form class="d-flex position-relative">
+                <input
+                  class="form-control search-input w-100"
+                  placeholder="Digite aqui o que você procura"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn search-btn position-absolute end-0"
+                  type="submit"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <div id="search-result" class="mt-2 fw-bold text-primary"></div>
+          </div>
+
+          <!-- Usuário e Carrinho -->
+          <div class="col-md-3 col-6 order-md-2 order-2 text-end">
+            <div class="d-flex justify-content-end">
+              <div class="user-area me-4 d-none d-sm-flex">
+                <a
+                  href="#"
+                  class="d-flex align-items-center text-decoration-none"
+                >
+                  <img
+                    src="img/cliente.png"
+                    alt="Usuário"
+                    class="user-icon me-2"
+                  />
+                  <div class="user-info">
+                    <span>Olá,</span>
+                    <span class="d-block">Nome cliente!</span>
+                  </div>
+                </a>
+              </div>
+              <div class="cart-area">
+                <a href="#" class="position-relative">
+                  <img
+                    src="img/carrinho.png"
+                    alt="Carrinho"
+                    class="cart-icon"
+                  />
+                  <span class="cart-badge position-absolute">2</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu de navegação -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container container-narrow">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMain"
+            aria-controls="navbarMain"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown position-static me-4">
+                <a
+                  class="nav-link dropdown-toggle todas-categorias"
+                  href="#"
+                  id="navbarCategories"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bars"></i> Todas as Categorias
+                </a>
+                <div
+                  class="dropdown-menu mega-menu w-100"
+                  aria-labelledby="navbarCategories"
+                >
+                  <div class="container container-narrow">
+                    <div class="row categorias-container">
+                      <!-- Coluna esquerda com departamentos -->
+                      <div class="col-md-3 departamentos-col">
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"
+                              >Departamento <i class="fas fa-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Colunas do meio com categorias -->
+                      <div class="col-md-6 categorias-col">
+                        <div class="row">
+                          <!-- Coluna 1 -->
+                          <div class="col-md-4 categoria-section">
+                            <h6 class="categoria-title">Categoria</h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- Coluna 2 -->
+                          <div class="col-md-4 categoria-section">
+                            <h6 class="categoria-title">Categoria</h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- Coluna 3 -->
+                          <div class="col-md-4 categoria-section">
+                            <h6 class="categoria-title">Categoria</h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Coluna direita com promoção -->
+                      <div class="col-md-3 promo-col">
+                        <div class="promo-image">
+                          <img
+                            src="img/caneca2.png"
+                            alt="Novos produtos"
+                            class="img-fluid"
+                          />
+                          <div class="promo-text">
+                            <h5>
+                              Confira os Produtos<br />Que acabaram<br />De
+                              chegar
+                            </h5>
+                            <a href="#" class="btn btn-ver-todos">VER TODOS</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Links de departamentos na navbar principal -->
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <h6 class="categoria-title text-primary">
+                              Categoria
+                            </h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <h6 class="categoria-title text-primary">
+                              Categoria
+                            </h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <h6 class="categoria-title text-primary">
+                              Categoria
+                            </h6>
+                            <ul class="categoria-list">
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="promo-image">
+                          <img
+                            src="img/caneca2.png"
+                            alt="Novos produtos"
+                            class="img-fluid"
+                          />
+                          <div class="promo-text mt-6">
+                            <h5>
+                              Confira os Produtos<br />Que acabaram<br />De
+                              chegar
+                            </h5>
+                            <a href="#" class="btn btn-ver-todos">VER TODOS</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+              <li class="nav-item dropdown position-static me-4">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+              <li class="nav-item dropdown position-static">
+                <a class="nav-link department-link" href="#">Departamento</a>
+                <div class="dropdown-menu department-menu w-100"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner principal -->
+    <section class="banner">
+      <div class="container mx-auto" style="max-width: 1200px">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center">
+            <img
+              class="banner-img mx-auto"
+              src="img/cadeira.png"
+              alt="Cadeira com roupas"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="banner-content text-center">
+              <h1 class="display-1 fw-bold">
+                SUPER<span class="fw-light">SALE</span>
+              </h1>
+              <h3 class="texto-banner text-primary">
+                ITENS SELECIONADOS COM ATÉ
+              </h3>
+              <h2 class="text-primary display-4 fw-bold">50%OFF</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de lançamentos -->
+    <section class="new-products section-padding">
+      <div class="container mx-auto" style="max-width: 1200px">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title">Lançamentos</h2>
+          <a href="#" class="view-more d-none d-md-inline">Ver mais</a>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Carrossel de produtos -->
+            <div
+              id="productCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Grupo 1 de produtos -->
+                <div class="carousel-item active">
+                  <div class="row">
+                    <!-- Produto 1 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Grupo 2 de produtos -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <!-- Produto 6 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 7 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 8 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 9 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 10 -->
+                    <div class="col mb-4">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controles do carrossel -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+
+              <!-- Indicadores do carrossel -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção produto destacado 1 -->
+    <section class="featured-product py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Imagem -->
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <div class="product-image-container">
+              <img src="img/caneca.png" alt="Caneca preta" class="img-fluid" />
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="col-md-6">
+            <div class="product-details-container">
+              <h2 class="section-title">LOREM IPSUM</h2>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção produto destacado 2-->
+    <section class="featured-product2 section-padding">
+      <div class="product-container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="feature-content">
+              <h2 class="section-title2">LOREM IPSUM</h2>
+              <div class="feature-item d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                  <img
+                    src="img/localização.png"
+                    alt="Localização"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="feature-text">
+                  <p>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                  <img
+                    src="img/localização.png"
+                    alt="Localização"
+                    class="img-fluid"
+                    class="photo-local"
+                  />
+                </div>
+                <div class="feature-text">
+                  <p>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-4">
+                <div class="feature-icon me-3">
+                  <img
+                    src="img/localização.png"
+                    alt="Localização"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="feature-text">
+                  <p>
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product-image">
+              <img src="img/caneca2.png" alt="Caneca" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção produto destacado 1 -->
+    <section class="featured-product py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Imagem -->
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <div class="product-image-container">
+              <img src="img/caneca.png" alt="Caneca preta" class="img-fluid" />
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="col-md-6">
+            <div class="product-details-container">
+              <h2 class="section-title">LOREM IPSUM</h2>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de lançamentos -->
+    <section class="new-products section-padding new-remove">
+      <div class="container mx-auto" style="max-width: 1200px">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title">Lançamentos</h2>
+          <a href="#" class="view-more d-none d-md-inline">Ver mais</a>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Carrossel de produtos -->
+            <div
+              id="productCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Grupo 1 de produtos -->
+                <div class="carousel-item active">
+                  <div class="row">
+                    <!-- Produto 1 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Grupo 2 de produtos -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <!-- Produto 6 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 7 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 8 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 9 -->
+                    <div class="col mb-4" style="width: 20%">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Produto 10 -->
+                    <div class="col mb-4">
+                      <div class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-img">
+                          <img
+                            src="img/camiseta.png"
+                            alt="Camiseta branca"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <h3 class="product-title">
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing
+                            Elit
+                          </h3>
+                          <div class="product-price">
+                            <span class="original-price">R$100,00</span>
+                            <div class="current-price">
+                              <span class="price">R$79,90</span>
+                              <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="installment">
+                              Ou em até
+                              <span class="fw-bold">10x de R$ 7,90</span>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary btn-buy w-100">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controles do carrossel -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+
+              <!-- Indicadores do carrossel -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#productCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de contato -->
+    <section class="contact-banner">
+      <div class="container-fluid p-0">
+        <div class="banner-bg">
+          <div class="contact-message fw-normal">
+            <h3>
+              Entre em contato conosco e verifique a disponibilidade para sua
+              região!
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section-padding">
+      <div class="container-n">
+        <div class="text-center mb-4">
+          <h2>
+            Cadastre-se na nossa <a href="#" class="text-primary">newsletter</a>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form class="newsletter-form">
+              <div class="form row g-3 align-items-center">
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Digite seu nome"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Digite seu e-mail"
+                  />
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                  <div class="form-check me-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="privacy-policy"
+                    />
+                    <label class="form-check-label" for="privacy-policy">
+                      Estou de acordo com a
+                      <a href="#">Política de Privacidade</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <!-- Logo e redes sociais -->
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <a href="#" class="footer-logo mb-4 d-block">
+              <img src="img/logo.png" alt="AVANTI" class="img-fluid" />
+            </a>
+            <div class="social-icons">
+              <a href="#" class="me-2"
+                ><img src="img/insta.png" alt="Instagram"
+              /></a>
+              <a href="#" class="me-2"
+                ><img src="img/facebook.png" alt="Facebook"
+              /></a>
+              <a href="#" class="me-2"
+                ><img src="img/youtube.png" alt="YouTube"
+              /></a>
+              <a href="#" class="me-2"
+                ><img src="img/tiktok-.png" alt="TikTok"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Links institucionais -->
+          <div class="col-md-2">
+            <h6>Institucional</h6>
+            <ul class="footer-links">
+              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="#">Nossas Lojas</a></li>
+              <li><a href="#">Privacidade e Segurança</a></li>
+              <li><a href="#">Termos e Condições</a></li>
+            </ul>
+          </div>
+
+          <!-- Central de ajuda -->
+          <div class="col-md-2">
+            <h6>Central de ajuda</h6>
+            <ul class="footer-links">
+              <li><a href="#">Fale Conosco</a></li>
+              <li><a href="#">Frete e Entrega</a></li>
+              <li><a href="#">Trocas e Devoluções</a></li>
+              <li><a href="#">Formas de Pagamento</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Atendimento -->
+          <div class="col-md-4">
+            <h6>Atendimento</h6>
+            <ul class="footer-links">
+              <li><strong>Telefone:</strong> (00) 1234-5678</li>
+              <li><strong>E-mail:</strong> exemplo@exemplo.com.br</li>
+              <li>
+                <strong>Horário de atendimento:</strong><br />
+                Segunda a Sábado: 07h00 às 19h00<br />
+                Domingos e Feriados: 07h00 às 12h00
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Formas de pagamento -->
+        <div class="row payment-methods justify-content-center mb-4">
+          <div class="col-auto"><img src="img/amex.png" alt="Amex" /></div>
+          <div class="col-auto"><img src="img/master.png" alt="Master" /></div>
+          <div class="col-auto"><img src="img/visa.png" alt="Visa" /></div>
+          <div class="col-auto">
+            <img src="img/hipercard.png" alt="Hipercard" />
+          </div>
+          <div class="col-auto"><img src="img/cielo.png" alt="Elo" /></div>
+          <div class="col-auto"><img src="img/diners.png" alt="Diners" /></div>
+          <div class="col-auto"><img src="img/paypal.png" alt="PayPal" /></div>
+          <div class="col-auto"><img src="img/pix.png" alt="Pix" /></div>
+          <div class="col-auto"><img src="img/boleto.png" alt="Boleto" /></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Copyright -->
+    <footer class="container">
+      <div class="copyright text-center mb-4">
+        <p class="small">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril deleuit augue duis dolore te feugait nulla facilisi.
+        </p>
+      </div>
+
+      <!-- Selos de segurança -->
+      <div class="row security-stamps justify-content-center mt-4">
+        <div class="col-auto">
+          <img src="img/lets.png" alt="Selo de Segurança" />
+        </div>
+        <div class="col-auto">
+          <img src="img/vtex-pci-200.png" alt="Selo de Segurança" />
+        </div>
+        <div class="col-auto"><img src="img/avanti.png" alt="AVANTI" /></div>
+        <div class="col-auto">
+          <img src="img/vtex.png" alt="Selo de Segurança" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
